@@ -1,0 +1,46 @@
+//requirement 1 case 1
+#include<iostream>
+
+int main(){
+	using namespace std;
+	int num1=0,num2=0;
+	cout<<"Please input two integers"<<endl;
+	cin>>num1>>num2;
+	cout<<"the mutiply of them is:"<<num1*num2<<endl;
+	return 0;
+}
+
+//requirement 2
+//This program can detect if the input is valid and then call attention to the user for inputing again
+#include<iostream>
+
+int main() {
+	using namespace std;
+	int num1 = 0, num2 = 0, judge = 1;//define variable
+	cout << "Please input one integer" << endl;
+	while (!(cin >> num1)) {//firstly judge whether the first num is valid
+		cin.clear();
+		cin.ignore();//clear the num input before
+		cout << "invalid input,please try again" << endl;
+	}
+	cout << "Now please input the other integer" << endl;
+	while (!(cin >> num2)) {//then judge the other integer
+		cin.clear();
+		cin.ignore();
+		cout << "invalid input,please try again" << endl;
+	}
+	cout << "the mutiply of them is:" << num1 * num2 << endl;//mutiply two integers
+	return 0;
+}
+
+//requirement 3
+//solution  :change the type of data num1 and num2,for example, change it form "int" to "long long "
+int main(){
+	using namespace std;
+	long long num1=0,num2=0;
+	cout<<"Please input two integers"<<endl;
+	cin>>num1>>num2;
+	cout<<"the mutiply of them is:"<<num1*num2<<endl;
+	return 0;
+}
+
