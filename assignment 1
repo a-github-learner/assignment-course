@@ -6,7 +6,7 @@ int main(){
 	int num1=0,num2=0;
 	cout<<"Please input two integers"<<endl;
 	cin>>num1>>num2;
-	cout<<"the mutiply of them is:"<<num1*num2<<endl;
+	cout<<"the multiply of them is:"<<num1*num2<<endl;
 	return 0;
 }
 
@@ -29,7 +29,7 @@ int main() {
 		cin.ignore();
 		cout << "invalid input,please try again" << endl;
 	}
-	cout << "the mutiply of them is:" << num1 * num2 << endl;//mutiply two integers
+	cout << "the multiply of them is:" << num1 * num2 << endl;//mutiply two integers
 	return 0;
 }
 
@@ -40,7 +40,7 @@ int main(){
 	long long num1=0,num2=0;
 	cout<<"Please input two integers"<<endl;
 	cin>>num1>>num2;
-	cout<<"the mutiply of them is:"<<num1*num2<<endl;
+	cout<<"the multiply of them is:"<<num1*num2<<endl;
 	return 0;
 }
 
