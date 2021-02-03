@@ -35,6 +35,8 @@ int main() {
 
 //requirement 3
 //solution  :change the type of data num1 and num2,for example, change it form "int" to "long long "
+#include<iostream>
+
 int main(){
 	using namespace std;
 	long long num1=0,num2=0;
