@@ -1,0 +1,76 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int calculate(string,char)
+{
+	string array;
+	int a;
+	cin >> array;
+	int length = array.length() - 1;
+	int i, j, mark_mid = 0, mark_small = 0, mark_big = 0, numl = 0, numr = 0;
+	int long_l;	int	sum = 0;
+	int num = 0;
+	for (i = 0; i <= length; i++) {
+		if (array[i] == 'q') {
+			mark_mid = i;
+			break;
+		}
+	}
+	i -= 1;
+	while (array[i] < 58) {
+		i -= 1;
+		if (i == 0)
+			break;
+	}
+	if (i == 0)
+		mark_small = i;
+	if (array[i] > 58 && i != 0)
+		mark_small = ++i;
+	i = mark_mid;
+	i += 1;
+	while (array[i] < 58) {
+		i++;
+		if (i == length)
+			break;
+	}
+	if (i == length)
+		mark_big = i;
+	if (array[i] > 58 && i != length)
+		mark_big = --i;
+	for (i = mark_small; i < mark_mid; i++)
+		sum = sum + (array[i] - 48) * pow(10, mark_mid - i - 1);
+	numl = sum;
+	sum = 0;
+
+	for (i = mark_mid + 1; i <= mark_big; i++)
+		sum = sum + (array[i] - 48) * pow(10, mark_big - i);
+	numr = sum;
+	sum = 0;
+	int output = numr * numl;
+	int storeup = output;
+	string a;
+	for (j = 0; output < 1; j++) {
+		storeup %= 10;
+		a[j]=storeup;
+		output /= 10;
+		storeup = output;
+		
+	}
+	int  m = a; strlen(a);
+	for (j = 0; j <= m/2; j++){
+		int c = 0, d = 0;
+		c = a[j];
+		d = a[m - j];
+		a[m - j] = c;
+		a[j] = d;
+	}
+	for (i=mark_small+1,j=0;j<=m; j++) {
+
+		array[i] = a[j];
+	}
+	for (i = mark_small + 1 + m, j = mark_big; j <= length; i++, j++)
+		array[i] = array[j];
+
+	cout << array << endl;
+}
